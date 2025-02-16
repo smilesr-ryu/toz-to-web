@@ -48,6 +48,7 @@ function App() {
   return (
     <style.AppContainer colortheme={theme}>
       <GlobalStyles />
+      <LogoDiv></LogoDiv>
       <style.MainContainer colortheme={theme}>
         <style.LogoImg src={logo} alt="logo" />
         <Screen calc={calc} screen={screen} theme={theme} />

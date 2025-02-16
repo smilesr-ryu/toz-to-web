@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import NotoSansBold from '../fonts/NotoSansKR-Bold.woff'
+import NotoSansBold from '../fonts/NotoSansKR-Bold.woff';
 
 const rgba = (r, g, b, a) => `rgba(${r}, ${g}, ${b}, ${a})`;
 
@@ -81,7 +81,7 @@ export const MainContainer = styled.div`
 export const LogoImg = styled.img`
   height: 35px;
   /* width: 55px; */
-`
+`;
 
 //buttons
 export const ButtonContainer = styled.div`
@@ -244,5 +244,10 @@ export const ImageBtn = styled.div`
   }
 `;
 
-
-
+export const LogoDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+`;
