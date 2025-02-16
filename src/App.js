@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import * as style from './styles/mainStyle';
 
 //이미지
-import ausopenLogo from './image/logo/ausopen-logo.svg'
+import ausopenLogo from './image/logo/ausopen-logo.svg';
 import usopenLogo from './image/logo/usopen-logo.svg';
 import wimLogo from './image/logo/wimbledon-logo.svg';
 import rolLogo from './image/logo/rolandgarros-logo.svg';
 
-import GlobalStyles from "./styles/globalStyles";
+import GlobalStyles from './styles/globalStyles';
 
 //component
 import Screen from './components/Screen';
@@ -35,7 +35,7 @@ function App() {
   const [calc, setCalc] = useState('0');
   const [prevCalc, setPrevCalc] = useState(0);
   const [operation, setOperation] = useState('');
-  
+
   // console.log(
   //   'calc :',
   //   calc,
