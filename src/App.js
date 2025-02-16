@@ -15,7 +15,8 @@ import Button from './components/Button';
 import { IconButton } from '@mui/material';
 
 import LoginIcon from '@mui/icons-material/Login';
-
+import { useDialogStore } from './states/useDialogStore';
+import Login from './components/Login';
 function App() {
   // theme
   const [theme, setTheme] = useState(() => {
@@ -39,14 +40,9 @@ function App() {
   const [prevCalc, setPrevCalc] = useState(0);
   const [operation, setOperation] = useState('');
 
-  // console.log(
-  //   'calc :',
-  //   calc,
-  //   'prev :',
-  //   prevCalc,
-  //   'op :',
-  //   operation
-  // );
+  const isOpen = useDialogStore(state => state.isOpen);
+  const openDialog = useDialogStore(state => state.openDialog);
+  const closeDialog = useDialogStore(state => state.closeDialog);
 
   return (
     <style.AppContainer colortheme={theme}>
@@ -56,7 +52,7 @@ function App() {
         <style.LogoDiv>
           <div></div>
           <style.LogoImg src={logo} alt="logo" />
-          <IconButton>
+          <IconButton onClick={openDialog}>
             <LoginIcon />
           </IconButton>
         </style.LogoDiv>
@@ -82,6 +78,7 @@ function App() {
       <style.RowLine className="firstLine" />
       <style.RowLine className="secondLine" />
       <style.RowLine className="thirdLine" />
+      {isOpen && <Login open={isOpen} closeDialog={closeDialog} />}
     </style.AppContainer>
   );
 }
