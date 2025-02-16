@@ -5,8 +5,11 @@
 
 ## Available Scripts
 
-If this is your first time running the project, please press `npm i`.
-Then, In the project directory, you can run: `npm start`
+```js
+npm -g i pnpm
+pnpm install
+pnpm start
+```
 
 ## 🚧 기능구현
 
