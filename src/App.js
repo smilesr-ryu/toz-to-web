@@ -12,6 +12,9 @@ import GlobalStyles from './styles/globalStyles';
 //component
 import Screen from './components/Screen';
 import Button from './components/Button';
+import { IconButton } from '@mui/material';
+
+import LoginIcon from '@mui/icons-material/Login';
 
 function App() {
   // theme
@@ -48,9 +51,15 @@ function App() {
   return (
     <style.AppContainer colortheme={theme}>
       <GlobalStyles />
-      <LogoDiv></LogoDiv>
+
       <style.MainContainer colortheme={theme}>
-        <style.LogoImg src={logo} alt="logo" />
+        <style.LogoDiv>
+          <div></div>
+          <style.LogoImg src={logo} alt="logo" />
+          <IconButton>
+            <LoginIcon />
+          </IconButton>
+        </style.LogoDiv>
         <Screen calc={calc} screen={screen} theme={theme} />
         <Button
           calc={calc}

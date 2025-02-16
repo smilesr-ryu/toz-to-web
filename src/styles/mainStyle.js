@@ -5,6 +5,7 @@ const rgba = (r, g, b, a) => `rgba(${r}, ${g}, ${b}, ${a})`;
 
 export const AppContainer = styled.div`
   display: flex;
+
   position: relative;
   justify-content: center;
   align-items: center;
@@ -246,8 +247,8 @@ export const ImageBtn = styled.div`
 
 export const LogoDiv = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 100%;
+  height: 35px;
 `;
